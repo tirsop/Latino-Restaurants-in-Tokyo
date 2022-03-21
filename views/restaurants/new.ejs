@@ -1,0 +1,41 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="container">
+    <div class="row">
+        <h1 class="text-center">Add a new restaurant</h1>
+        <div class="col-xs-12 col-sm-10 col-md-6 mx-auto">
+            <form action="/restaurants" method="post">
+                <div class="mb-3">
+                    <label class="form-label" for="title">Name:</label>
+                    <input class="form-control" type="text" name="restaurant[title]" id="title">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="location">Location:</label>
+                    <input class="form-control" type="text" name="restaurant[location]" id="location">
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="description">Decription:</label>
+                    <textarea class="form-control" type="text" name="restaurant[description]"
+                        id="description"></textarea>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="price">Price:</label>
+                    <div class="input-group mb-3">
+                        <span class="input-group-text" id="basic-addon1">JPN</span>
+                        <input type="text" class="form-control" placeholder="0.00" aria-label="price"
+                            aria-describedby="" id="price" name="restaurant[price]">
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <label class="form-label" for="image">Image URL:</label>
+                    <input class="form-control" type="text" name="restaurant[image]" id="image">
+                </div>
+
+                <div class="mb-3">
+                    <button class="btn btn-success">Create a new restaurant</button>
+                </div>
+            </form>
+            <a href="/restaurants">Back to all restaurants</a>
+        </div>
+    </div>
+</div>
