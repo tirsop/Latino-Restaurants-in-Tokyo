@@ -11,8 +11,7 @@ const RestaurantSchema = new mongoose.Schema({
     },
     country: {
         type: String,
-        required: true,
-        enum: ['Spanish', 'Mexican', 'Peruvian', 'Ohter']
+        required: true
     },
     url: {
         type: String,
