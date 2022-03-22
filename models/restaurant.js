@@ -17,7 +17,7 @@ const RestaurantSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    image: String,
+    image: String
 })
 
 export default mongoose.model('Restaurant', RestaurantSchema); 
