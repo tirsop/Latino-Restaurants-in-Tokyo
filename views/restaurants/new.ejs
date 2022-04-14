@@ -7,29 +7,24 @@
 
         <form action="/restaurants" method="post" novalidate class="needs-validation">
           <div class="mb-3">
-            <label class="form-label" for="title">Name:</label>
-            <input class="form-control" type="text" name="restaurant[title]" id="title" required>
+            <label class="form-label" for="name">Name:</label>
+            <input class="form-control" type="text" name="restaurant[name]" id="name" required>
           </div>
           <div class="mb-3">
             <label class="form-label" for="location">Location:</label>
             <input class="form-control" type="text" name="restaurant[location]" id="location" required>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="description">Decription:</label>
-            <textarea class="form-control" type="text" name="restaurant[description]" id="description"
-              required></textarea>
+            <label class="form-label" for="country">Country:</label>
+            <input class="form-control" type="text" name="restaurant[country]" id="country" required>
           </div>
           <div class="mb-3">
-            <label class="form-label" for="price">Price:</label>
-            <div class="input-group mb-3">
-              <span class="input-group-text" id="basic-addon1">JPN</span>
-              <input type="text" class="form-control" placeholder="0.00" aria-label="price" aria-describedby=""
-                id="price" name="restaurant[price]" required>
-            </div>
+            <label class="form-label" for="url">Google Maps URL:</label>
+            <input class="form-control" type="text" name="restaurant[url]" id="url" required>
           </div>
           <div class="mb-3">
             <label class="form-label" for="image">Image URL:</label>
-            <input class="form-control" type="text" name="restaurant[image]" id="image" required>
+            <input class="form-control" type="text" name="restaurant[image]" id="image">
           </div>
 
           <div class="mb-3">

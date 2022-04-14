@@ -1,64 +1,34 @@
 <% layout('layouts/boilerplate') %>
 
-	<div class="container">
-		<div class="row">
-			<div class="card col-xs-12 col-sm-11 col-md-8 mx-auto mb-3">
-				<img src="<%= restaurant.image %>" class="card-img-top" alt="...">
-				<div class="card-body">
-					<h5 class="card-title">
-						<%= restaurant.title %>
-					</h5>
-					<p class="card-text">
-						<small class="text-muted">
-							<%= restaurant.location %>
-						</small>
-					</p>
-					<p class="card-text">
-						<%= restaurant.description %>
-					</p>
-				</div>
-				<ul class="list-group list-group-flush">
-					<li class="list-group-item">JPN <%= restaurant.price %>
-					</li>
-				</ul>
-				<div class="card-body">
-					<a href="/restaurants/<%= restaurant._id %>/edit" class="btn btn-info">Edit</a>
-					<form class="d-inline" action="/restaurants/<%= restaurant._id %>?_method=delete" method="post">
-						<button class="btn btn-danger">Delete</button>
-					</form>
-				</div>
-				<div class="card-footer text-muted">
-					<a href="/restaurants">Back to all restaurants</a>
-				</div>
-			</div>
-		</div>
-	</div>
-
-
-
-
-
-	<h1>
-		<%= restaurant.title %>
-	</h1>
-	<h2>in <%= restaurant.location %>
-	</h2>
-	<img src="<%= restaurant.image %>" alt="">
-	<p>
-		<%= restaurant.description %>
-	</p>
-	<p>Price: JPN <%= restaurant.price %>
-	</p>
-
-
-	<p>
-		<a href="/restaurants/<%= restaurant._id %>/edit">Edit this restaurant</a>
-	</p>
-	<p>
-	<form action="/restaurants/<%= restaurant._id %>?_method=delete" method="post">
-		<button>Delete</button>
-	</form>
-	</p>
-	<footer>
-		<a href="/restaurants">Back to all restaurants</a>
-	</footer>
+  <div class="container">
+    <div class="row">
+      <div class="card col-xs-12 col-sm-11 col-md-8 mx-auto mb-3">
+        <img src="<%= restaurant.image %>" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">
+            <%= restaurant.name %>
+          </h5>
+          <p class="card-text">
+            <small class="text-muted">
+              <%= restaurant.location %>
+            </small>
+          </p>
+          <p class="card-text">
+            <%= restaurant.country %>
+          </p>
+          <a href="<%= restaurant.url %>" target="_blank">
+            <%= restaurant.url %>
+          </a>
+        </div>
+        <div class="card-body">
+          <a href="/restaurants/<%= restaurant._id %>/edit" class="btn btn-info">Edit</a>
+          <form class="d-inline" action="/restaurants/<%= restaurant._id %>?_method=delete" method="post">
+            <button class="btn btn-danger">Delete</button>
+          </form>
+        </div>
+        <div class="card-footer text-muted">
+          <a href="/restaurants">Back to all restaurants</a>
+        </div>
+      </div>
+    </div>
+  </div>
