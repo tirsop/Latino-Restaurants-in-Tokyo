@@ -1,28 +1,22 @@
 <% layout('layouts/boilerplate') %>
 
   <div class="container">
-    <h1>Spanish restaurants in Tokyo</h1>
-    <div>
-      <a href="/restaurants/new">Create a new restaurant</a>
+    <div class="d-flex justify-content-between align-items-center mb-5">
+      <h1>Spanish <span class="fw-light">Restaurants in Tokyo</span></h1>
+      <a href="/restaurants/new" class="bg-light buttons button-resume">Add a restaurant</a>
     </div>
 
-    <div class="row align-items-start">
+    <div class="row gap-0">
       <% for(let restaurant of restaurants) { %>
-        <div class="col-xs-12 col-sm-6 col-lg-4 card">
-          <a href="<%= restaurant.url %>" target="_blank">
-            <img src="<%= restaurant.image %>" class="card-img-top img-fluid" alt="..." />
-            <div class="card-body">
-              <h5 class="card-title">
-                <%= restaurant.name %>
-              </h5>
-              <p class="card-text">
-                <small class="text-muted">
-                  <%= restaurant.location %>
-                </small>
-              </p>
+        <div class="col-xs-12 col-sm-6 col-lg-4">
+          <a href="<%= restaurant.url %>" class="text-decoration-none" target="_blank">
+            <img src="<%= restaurant.image %>" class="img-fluid rounded-2 rest-img" alt="Restaurant's front door" />
+            <div class="ms-1">
+              <h5 class="text-dark fs-5 fw-light mt-1 mb-0"><%= restaurant.name %></h5>
+              <p class="text-muted fs-6"><%= restaurant.location %></p>
             </div>
           </a>
         </div>
-        <% } %>
+      <% } %>
     </div>
   </div>

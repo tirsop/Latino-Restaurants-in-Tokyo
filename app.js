@@ -28,6 +28,8 @@ app.set('views', path.join(__dirname, '/views'));
 app.set('view engine', 'ejs');                                  // for requiring ejs files.
 app.use(express.urlencoded({ extended: true }))           // need this line to use req.body.  use runs a function in every single request. 
 app.use(methodOverride('_method'));                       // to use PUT, PATCH, DELETE requests in html forms
+app.use(express.static(path.join(__dirname, 'public')));          // serve the public's folder assets
+
 
 
 // Function that validates new/updated items in the server side. Uses JOI schema and imports "schemas.js" file
