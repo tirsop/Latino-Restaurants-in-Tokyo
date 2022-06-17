@@ -20,7 +20,7 @@
   background: #01b392;
 }
 .button-resume::before {                /* B_RESUME*/
-  content: "📜 ";
+  content: "🥘 ";
 }
 .button-resume {
   background: #fff;

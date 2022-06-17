@@ -18,8 +18,7 @@ const addRestaurant = async () => {
       location: 'Shinjuku',
       country: 'Spanish',
       url: 'https://goo.gl/maps/v1zuSmhJy7jVYPep8',
-      image:
-        'https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/60113/60113285.jpg?token=0745494&api=v2',
+      image: 'https://tblg.k-img.com/resize/660x370c/restaurant/images/Rvw/60113/60113285.jpg?token=0745494&api=v2',
     },
     {
       name: 'EL ROSSELLO',
