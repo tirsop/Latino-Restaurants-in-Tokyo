@@ -1,5 +1,10 @@
 @import url("components/button.css");
 
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
 .rest-img {
   width: 300px;
   height: 200px;
