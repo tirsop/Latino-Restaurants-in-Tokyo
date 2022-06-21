@@ -9,12 +9,12 @@
       <a href="/restaurants/new" class="bg-light buttons button-resume">Add a restaurant</a>
     </div>
 
-    <div class="row gap-0">
+    <div class="row">
       <% for(let restaurant of restaurants) { %>
         <div class="col-xs-12 col-sm-6 col-lg-4">
           <a href="<%= restaurant.url %>" class="text-decoration-none" target="_blank">
             <img src="<%= restaurant.image %>" class="img-fluid rounded-2 rest-img" alt="Restaurant's front door" />
-            <div class="ms-1">
+            <div class="ps-1">
               <h5 class="text-dark fs-5 fw-light mt-1 mb-0"><%= restaurant.name %></h5>
               <p class="text-muted fs-6"><%= restaurant.location %></p>
             </div>

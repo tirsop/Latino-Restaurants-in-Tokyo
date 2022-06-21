@@ -11,4 +11,4 @@ const restaurantSchema = Joi.object({
 })
 
 
-export default restaurantSchema;
+export { restaurantSchema };

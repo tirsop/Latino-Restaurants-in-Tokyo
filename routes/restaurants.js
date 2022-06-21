@@ -2,6 +2,7 @@ import express from 'express';
 const router = express.Router();
 import Restaurant from '../models/restaurant.js';
 import catchAsync from '../utils/catchAsync.js';            // try and catch errors in async functions
+import { validateRestaurant } from '../middleware.js';              // what to do if user is not authenticate
 
 
 
@@ -15,7 +16,7 @@ router.get('/', catchAsync(async (req, res) => {
 router.get('/new', (req, res) => {
   res.render('restaurants/new');
 })
-router.post('/', catchAsync(async (req, res) => {
+router.post('/', validateRestaurant, catchAsync(async (req, res) => {
   const restaurant = new Restaurant(req.body.restaurant);
   await restaurant.save();
   req.flash('success', 'Thank you! The restaurant was added 😌');

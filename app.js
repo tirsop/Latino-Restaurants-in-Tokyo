@@ -21,8 +21,6 @@ mongoose.connect('mongodb://localhost:27017/latinoRestaurants')
     console.log(`--------------console.log\nMONGO CONNECTION ERROR:`)
     console.log(err + `\n`)
   })
-import Restaurant from './models/restaurant.js';                // import mongoose model created inside models folder
-import restaurantSchema from './schemas.js';           // JOI schema used to validate new/updated camps in the server side
 
 
 const app = express();                                          // abbreviation of the code
@@ -60,16 +58,7 @@ app.use((req, res, next) => {                             // creation of local v
 })
 
 
-// Function that validates new/updated items in the server side. Uses JOI schema and imports "schemas.js" file
-const validateRestaurant = (req, res, next) => {
-  const { error } = restaurantSchema.validate(req.body);
-  if (error) {
-    const msg = error.details.map(el => el.message).join('.');
-    throw new ExpressError(msg, 400);
-  } else {
-    next();
-  }
-}
+
 
 app.use('/restaurants', restaurantRoutes);
 
