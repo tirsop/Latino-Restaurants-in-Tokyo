@@ -1,25 +1,32 @@
 <% layout('layouts/boilerplate') %>
 
-  <div class="container">
-    <div class="d-flex justify-content-between align-items-start mb-5">
-      <div class="">
-        <h1>Spanish <span class="fw-light">Restaurants in Tokyo</span></h1>
-        <p class="fs-6 fw-light text-muted">Find where to eat authentic Spanish food in Tokyo</p>
-      </div>
-      <a href="/restaurants/new" class="bg-light buttons button-resume">Add a restaurant</a>
+<div class="container">
+  <div class="d-flex justify-content-between align-items-start mb-5">
+    <div class="">
+      <h1>Spanish <span class="fw-light">Restaurants in Tokyo</span></h1>
+      <p class="fs-6 fw-light text-muted">Find where to eat authentic Spanish food in Tokyo</p>
     </div>
-
-    <div class="row">
-      <% for(let restaurant of restaurants) { %>
-        <div class="col-xs-12 col-sm-6 col-lg-4">
-          <a href="<%= restaurant.url %>" class="text-decoration-none" target="_blank">
-            <img src="<%= restaurant.image %>" class="img-fluid rounded-2 rest-img" alt="Restaurant's front door" />
-            <div class="ps-1">
-              <h5 class="text-dark fs-5 fw-light mt-1 mb-0"><%= restaurant.name %></h5>
-              <p class="text-muted fs-6"><%= restaurant.location %></p>
-            </div>
-          </a>
-        </div>
-      <% } %>
-    </div>
+    <a href="/restaurants/new" class="bg-light buttons button-resume">Add a restaurant</a>
   </div>
+
+  <div class="row">
+    <div id='map' style='height: 300px;'></div>
+    <% for(let restaurant of restaurants) { %>
+      <div class="col-xs-12 col-sm-6 col-lg-4">
+        <a href="<%= restaurant.url %>" class="text-decoration-none" target="_blank">
+          <img src="<%= restaurant.image %>" class="img-fluid rounded-2 rest-img" alt="Restaurant's front door" />
+          <div class="ps-1">
+            <h5 class="text-dark fs-5 fw-light mt-1 mb-0"><%= restaurant.name %></h5>
+            <p class="text-muted fs-6"><%= restaurant.location %></p>
+          </div>
+        </a>
+      </div>
+    <% } %>
+  </div>
+</div>
+
+
+<script>
+  const mapToken = '<%-process.env.MAPBOX_TOKEN%>';
+</script>
+<script src="/javascripts/map.js"></script>
