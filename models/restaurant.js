@@ -17,7 +17,18 @@ const RestaurantSchema = new mongoose.Schema({
     type: String,
     // required: true
   },
-  image: String
+  image: String,
+  geometry: {
+    type: {
+      type: String,
+      enum: ['Point'],
+      required: true
+    },
+    coordinates: {
+      type: [Number],
+      required: true
+    }
+  }
 })
 
 export default mongoose.model('Restaurant', RestaurantSchema); 

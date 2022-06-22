@@ -1,6 +1,7 @@
 console.log(`\n\n\n\n\n\n\n\n\n
 ******************************************************************`);
 
+import 'dotenv/config';
 import express from 'express';                                  //import express package
 import path from 'path';
 import { URL } from 'url';
