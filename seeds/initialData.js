@@ -90,7 +90,7 @@ const addRestaurant = async () => {
       location: 'Naka-Meguro',
       country: 'Spanish',
       url: 'https://g.page/Bar-Portillo-Nakameguro?share',
-      image: 'https://tabelog.com/imgview/original?id=r94855111066603',
+      image: 'https://tabelog.com/imgview/original?id=r53941147584351',
       geometry: {
         type: "Point",
         coordinates: [
